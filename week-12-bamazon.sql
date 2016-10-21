@@ -1,6 +1,9 @@
 USE Bamazon;
 
-CREATE TABLE Products(
+SELECT * FROM Bamazon.products;
+
+
+CREATE TABLE products(
 ItemID INTEGER(11) AUTO_INCREMENT NOT NULL,
 PRIMARY KEY (ItemID),
 ProductName VARCHAR(50) NOT NULL,
@@ -8,7 +11,7 @@ Price INTEGER(11) NOT NULL,
 StockQuantity INTEGER(11)
 );
 
-INSERT INTO Bamazon.Products(ProductName, Price, StockQuantity)
+INSERT INTO Bamazon.products(ProductName, Price, StockQuantity)
 Values
 ("Inflatable Toast", "50.00", "100"),
 ("Unicorn Meat", "1000.00", "3"),
@@ -21,7 +24,6 @@ Values
 ("A Job", "4000.00", "30"),
 ("Grass Clippings", "1.00", "1000");
 
-SELECT * FROM Bamazon.Products;
 
 
 

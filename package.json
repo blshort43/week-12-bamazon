@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/blshort43/week-12-bamazon#readme",
   "dependencies": {
+    "inquirer": "^1.2.2",
     "mysql": "^2.11.1",
     "prompt": "^1.0.0"
   }
