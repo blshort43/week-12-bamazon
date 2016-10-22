@@ -8,7 +8,7 @@ Price INTEGER(11) NOT NULL,
 StockQuantity INTEGER(11)
 );
 
-SELECT * FROM Bamazon.products;
+SELECT * FROM Bamazon.proproductsducts;
 
 INSERT INTO Bamazon.products(ProductName, Price, StockQuantity)
 Values
