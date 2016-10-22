@@ -19,8 +19,8 @@ var start = function() {
     inquirer.prompt({
         name: "options",
         type: "rawlist",
-        message: "Would you like to [View Inventory], [View Low Inventory], [Add Inventory] or [Add New Product]?",
-        choices: ["View Inventory", "View Low Inventory", "Add Inventory", "Add New Product"]
+        message: "Would you like to [View Inventory], [View Low Inventory], [Add Inventory], [Add New Product] or [Exit]?",
+        choices: ["View Inventory", "View Low Inventory", "Add Inventory", "Add New Product", "Exit"]
     }).then(function(answer) {
         if (answer.options.toUpperCase() == "VIEW INVENTORY") {
             viewInventory();
@@ -30,13 +30,15 @@ var start = function() {
             addInventory();
         } else if (answer.options.toUpperCase() == "ADD NEW PRODUCT") {
             addProduct();
+        } else if (answer.options.toUpperCase() == "EXIT") {
+            process.exit()
         }
     })
 };
 
 var viewInventory = function() {
     connection.query('SELECT * FROM products', function(err, res) {
-    		console.log("wat")
+        console.log("wat")
         if (err) {
             throw err;
         } else {
