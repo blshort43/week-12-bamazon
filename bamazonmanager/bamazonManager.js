@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
     if (err) throw err;
-    console.log("Connected as ID: " + connection.threadId);
+    console.log("Welcome, you have connected to the Bamazon inventory management system.");
     start();
 });
 
