@@ -63,7 +63,7 @@ var start = function() {
                             }
                         },
                     }).then(function(answer) {
-                        if (chosenItem.StockQuantity > parseInt(answer.amount)) {
+                        if (chosenItem.StockQuantity > 0) {
                             var newAmount = (chosenItem.StockQuantity - parseInt(answer.amount));
                             connection.query("UPDATE products SET ? WHERE ?", [{
                                 StockQuantity: newAmount
